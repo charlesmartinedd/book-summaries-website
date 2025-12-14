@@ -322,6 +322,59 @@ html, body {
     height: 100%;
     padding: var(--spacing-lg);
     overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* Section Scrollbars */
+.section::-webkit-scrollbar {
+    width: 10px;
+}
+
+.section::-webkit-scrollbar-track {
+    background: var(--gray-100);
+    border-radius: var(--radius-full);
+    margin: var(--spacing-sm) 0;
+}
+
+.section::-webkit-scrollbar-thumb {
+    background: var(--gray-300);
+    border-radius: var(--radius-full);
+    border: 2px solid var(--gray-100);
+}
+
+.section::-webkit-scrollbar-thumb:hover {
+    background: var(--gray-400);
+}
+
+#christmas-carol .section::-webkit-scrollbar-thumb {
+    background: var(--christmas-primary);
+    opacity: 0.6;
+}
+
+#christmas-carol .section::-webkit-scrollbar-thumb:hover {
+    background: #b91c1c;
+}
+
+#eighty-days .section::-webkit-scrollbar-thumb {
+    background: var(--adventure-primary);
+}
+
+#eighty-days .section::-webkit-scrollbar-thumb:hover {
+    background: #1e3a5f;
+}
+
+/* Firefox scrollbar support */
+.section {
+    scrollbar-width: thin;
+    scrollbar-color: var(--gray-300) var(--gray-100);
+}
+
+#christmas-carol .section {
+    scrollbar-color: var(--christmas-primary) var(--gray-100);
+}
+
+#eighty-days .section {
+    scrollbar-color: var(--adventure-primary) var(--gray-100);
 }
 
 .section.active {
@@ -874,6 +927,26 @@ html, body {
     padding: var(--spacing-xl);
     overflow-y: auto;
     flex: 1;
+    scrollbar-width: thin;
+    scrollbar-color: var(--gray-300) var(--gray-100);
+}
+
+.modal-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-body::-webkit-scrollbar-track {
+    background: var(--gray-100);
+    border-radius: var(--radius-full);
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+    background: var(--gray-300);
+    border-radius: var(--radius-full);
+}
+
+.modal-body::-webkit-scrollbar-thumb:hover {
+    background: var(--gray-400);
 }
 
 .modal-body h2 {
