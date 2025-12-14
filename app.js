@@ -58,8 +58,12 @@ function showSection(prefix, sectionId) {
 
     // Update tab buttons
     container.querySelectorAll('.tab-btn').forEach(btn => {
-        const btnSection = btn.textContent.toLowerCase().includes('summary') ? 'summary' :
-                          btn.textContent.toLowerCase().includes('chapter') ? 'chapters' : 'booktalk';
+        const btnText = btn.textContent.toLowerCase();
+        let btnSection;
+        if (btnText.includes('summary')) btnSection = 'summary';
+        else if (btnText.includes('chapter')) btnSection = 'chapters';
+        else if (btnText.includes('question')) btnSection = 'questions';
+        else btnSection = 'booktalk';
         btn.classList.toggle('active', btnSection === sectionId);
     });
 
@@ -135,6 +139,9 @@ function renderChristmasCarol() {
             </div>
         </div>
     `).join('');
+
+    // Render Study Questions
+    renderStudyQuestions();
 
     // Render Book Talk
     const booktalkGrid = document.getElementById('cc-booktalk-grid');
@@ -257,6 +264,46 @@ function renderEightyDays() {
             `).join('')}
         </div>
     `;
+}
+
+// ==========================================
+// STUDY QUESTIONS
+// ==========================================
+
+function renderStudyQuestions() {
+    if (!christmasCarolData.studyQuestions) return;
+
+    const container = document.getElementById('cc-questions-grid');
+    const stave2 = christmasCarolData.studyQuestions.stave2;
+
+    container.innerHTML = `
+        <div class="questions-header">
+            <h2>${stave2.title}</h2>
+            <p>Click each question to reveal the answer</p>
+        </div>
+        ${stave2.questions.map((q, index) => `
+            <div class="question-card" id="question-${index}">
+                <div class="question-header" onclick="toggleQuestion(${index})">
+                    <div class="question-number">${index + 1}</div>
+                    <div class="question-text">${q.question}</div>
+                    <div class="question-toggle">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M6 9l6 6 6-6"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="answer-panel">
+                    <div class="answer-label">Answer</div>
+                    <div class="answer-text">${q.answer}</div>
+                </div>
+            </div>
+        `).join('')}
+    `;
+}
+
+function toggleQuestion(index) {
+    const card = document.getElementById(`question-${index}`);
+    card.classList.toggle('expanded');
 }
 
 // ==========================================

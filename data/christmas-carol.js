@@ -55,6 +55,50 @@ const christmasCarolData = {
         }
     ],
 
+    studyQuestions: {
+        stave2: {
+            title: "Stave 2: The First of the Three Spirits",
+            questions: [
+                {
+                    question: "What did Scrooge notice about the church chimes when he woke up? What did he think happened?",
+                    answer: "Scrooge noticed the church bells chimed twelve, but that was the same time he had gone to bed! He was confused and thought maybe he had slept through an entire day, or that something was wrong with the clock."
+                },
+                {
+                    question: "Describe what the spirit looks like.",
+                    answer: "The Ghost of Christmas Past is a strange figure that looks like both a child and an old person at the same time. It has a bright, clear light shining from the top of its head and carries a cap shaped like a candle snuffer."
+                },
+                {
+                    question: "Who was the first spirit?",
+                    answer: "The first spirit was the Ghost of Christmas Past. This ghost's job was to show Scrooge important memories from his own life, so he could remember who he used to be before he became so cold and greedy."
+                },
+                {
+                    question: "What is the business that brings the Spirit to Scrooge?",
+                    answer: "The Spirit tells Scrooge it has come for his \"welfare\" - meaning to help save him. The ghost's mission is to show Scrooge his past so he can learn from his mistakes and change his ways before it's too late."
+                },
+                {
+                    question: "Describe the first scene to which the spirit brings Scrooge. How does Scrooge feel about this place?",
+                    answer: "The spirit takes Scrooge to his old boarding school, where he sees himself as a lonely young boy sitting alone at Christmas while all the other students went home. Scrooge feels very sad and emotional—a tear rolls down his cheek as he remembers how abandoned and forgotten he felt."
+                },
+                {
+                    question: "Who was Fan? Describe her importance. How does Scrooge feel about her? How do you know?",
+                    answer: "Fan was Scrooge's younger sister who came to bring him home from boarding school one Christmas. She was very loving and kind, and she died young. Scrooge clearly loved her deeply—we know because he gets very emotional when he sees her, and Fan was the mother of his nephew Fred, whom he now ignores."
+                },
+                {
+                    question: "Describe the scene at Fezziwig's. How does Scrooge feel about the scene? What does the Spirit say about the party? What does Scrooge reply?",
+                    answer: "Mr. Fezziwig throws a wonderful Christmas party for his workers with dancing, food, and laughter. Scrooge feels happy watching this memory and realizes Fezziwig made everyone joyful without spending much money. When the Spirit points this out, Scrooge defends Fezziwig and realizes he treats his own clerk, Bob Cratchit, much worse."
+                },
+                {
+                    question: "Describe the scene with Belle. Why is this important?",
+                    answer: "Belle was the young woman Scrooge was going to marry, but she breaks off their engagement because Scrooge now loves money more than her. This scene is important because it shows the moment Scrooge chose greed over love, and we see Belle later happy with another family—the life Scrooge could have had."
+                },
+                {
+                    question: "How did Scrooge get rid of the Spirit?",
+                    answer: "Scrooge grabbed the ghost's cap (the candle-snuffer) and pushed it down over the spirit's head to put out its light. He couldn't bear to watch any more painful memories, especially seeing Belle's happy family that he gave up for money."
+                }
+            ]
+        }
+    },
+
     bookTalk: {
         title: "A Christmas Carol",
         published: "1843",

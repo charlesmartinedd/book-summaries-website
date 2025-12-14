@@ -601,6 +601,189 @@ html, body {
 }
 
 /* ==========================================
+   STUDY QUESTIONS
+   ========================================== */
+
+.questions-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.questions-header {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+    padding: var(--spacing-lg);
+    background: linear-gradient(135deg, var(--christmas-primary) 0%, #7f1d1d 100%);
+    border-radius: var(--radius-xl);
+    color: var(--white);
+}
+
+.questions-header h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-xs);
+}
+
+.questions-header p {
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+.question-card {
+    background: var(--white);
+    border-radius: var(--radius-xl);
+    margin-bottom: var(--spacing-md);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--gray-100);
+    transition: all var(--transition-fast);
+}
+
+.question-card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
+}
+
+.question-card.expanded {
+    border-color: var(--christmas-primary);
+}
+
+.question-header {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md) var(--spacing-lg);
+    cursor: pointer;
+    transition: background var(--transition-fast);
+}
+
+.question-header:hover {
+    background: var(--gray-50);
+}
+
+.question-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 36px;
+    height: 36px;
+    background: var(--christmas-primary);
+    color: var(--white);
+    border-radius: var(--radius-full);
+    font-weight: 700;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+}
+
+.question-text {
+    flex: 1;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--gray-800);
+    line-height: 1.5;
+    padding-top: 6px;
+}
+
+.question-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: var(--gray-100);
+    border-radius: var(--radius-full);
+    flex-shrink: 0;
+    transition: all var(--transition-fast);
+    margin-top: 2px;
+}
+
+.question-toggle svg {
+    width: 20px;
+    height: 20px;
+    color: var(--gray-500);
+    transition: transform var(--transition-fast);
+}
+
+.question-card.expanded .question-toggle {
+    background: var(--christmas-primary);
+}
+
+.question-card.expanded .question-toggle svg {
+    color: var(--white);
+    transform: rotate(180deg);
+}
+
+.answer-panel {
+    display: none;
+    padding: 0 var(--spacing-lg) var(--spacing-lg);
+    padding-left: calc(var(--spacing-lg) + 36px + var(--spacing-md));
+}
+
+.question-card.expanded .answer-panel {
+    display: block;
+    animation: slideDown var(--transition-fast);
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.answer-label {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--white);
+    background: var(--christmas-secondary);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--spacing-sm);
+}
+
+.answer-text {
+    font-size: 0.95rem;
+    color: var(--gray-700);
+    line-height: 1.7;
+    padding: var(--spacing-md);
+    background: var(--gray-50);
+    border-radius: var(--radius-lg);
+    border-left: 4px solid var(--christmas-secondary);
+}
+
+/* 80 Days theme for questions (if added later) */
+#eighty-days .question-number {
+    background: var(--adventure-primary);
+}
+
+#eighty-days .question-card.expanded {
+    border-color: var(--adventure-primary);
+}
+
+#eighty-days .question-card.expanded .question-toggle {
+    background: var(--adventure-primary);
+}
+
+#eighty-days .answer-label {
+    background: var(--adventure-secondary);
+}
+
+#eighty-days .answer-text {
+    border-left-color: var(--adventure-secondary);
+}
+
+#eighty-days .questions-header {
+    background: linear-gradient(135deg, var(--adventure-primary) 0%, #0f172a 100%);
+}
+
+/* ==========================================
    MODAL
    ========================================== */
 
