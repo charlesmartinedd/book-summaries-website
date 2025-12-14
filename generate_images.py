@@ -1,17 +1,33 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """
 Generate AI images for book summary website using OpenRouter DALL-E 3 API
 """
 
 import os
+import sys
 import requests
 import time
+import json
+import base64
 from pathlib import Path
 
+# Load .env if available
+try:
+    from dotenv import load_dotenv
+    load_dotenv(Path.home() / ".env")
+except ImportError:
+    pass
+
+# Set UTF-8 encoding for Windows console
+if sys.platform == 'win32':
+    sys.stdout.reconfigure(encoding='utf-8')
+
 # OpenRouter API configuration
-OPENROUTER_API_KEY = "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"
+OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY", "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")
 API_URL = "https://openrouter.ai/api/v1/chat/completions"
-MODEL = "openai/dall-e-3"
+# Use Nano Banana (Gemini Flash with image generation) - fast, affordable, returns base64 images
+MODEL = "google/gemini-2.5-flash-image"
 
 # Base style for all images
 BASE_STYLE = "modern 3D animated style, Pixar-quality, soft lighting, vibrant colors, child-friendly, cinematic composition"
@@ -57,55 +73,52 @@ def generate_image(prompt: str, retries: int = 3) -> str:
         "X-Title": "Book Summaries Image Generator"
     }
 
+    # DALL-E 3 via OpenRouter uses chat completions format
     payload = {
         "model": MODEL,
         "messages": [
             {
                 "role": "user",
-                "content": [
-                    {
-                        "type": "text",
-                        "text": prompt
-                    }
-                ]
+                "content": prompt
             }
-        ],
-        "max_tokens": 1000
+        ]
     }
 
     for attempt in range(retries):
         try:
             print(f"  Attempt {attempt + 1}/{retries}...")
             response = requests.post(API_URL, headers=headers, json=payload, timeout=120)
-            response.raise_for_status()
 
+            # Debug response
+            if response.status_code != 200:
+                print(f"  Response status: {response.status_code}")
+                print(f"  Response body: {response.text}")
+
+            response.raise_for_status()
             data = response.json()
 
-            # Extract image URL from response
-            # DALL-E 3 returns the image URL in the content
-            content = data.get("choices", [{}])[0].get("message", {}).get("content", "")
+            # Extract image data from Nano Banana response
+            # The response contains base64-encoded image in the "images" field
+            message = data.get("choices", [{}])[0].get("message", {})
+            images = message.get("images", [])
 
-            # The content might contain markdown with image URL
-            if "![" in content and "](" in content:
-                # Extract URL from markdown format
-                start = content.index("](") + 2
-                end = content.index(")", start)
-                image_url = content[start:end]
-            else:
-                # Try to find URL in content
-                lines = content.split('\n')
-                for line in lines:
-                    if line.startswith('http'):
-                        image_url = line.strip()
-                        break
+            if images and len(images) > 0:
+                # Extract base64 image data
+                image_data = images[0].get("image_url", {}).get("url", "")
+
+                # Check if it's base64 data
+                if image_data.startswith("data:image/"):
+                    print(f"  ✓ Generated base64 image ({len(image_data)} bytes)")
+                    return image_data
                 else:
-                    raise ValueError(f"No image URL found in response: {content}")
-
-            print(f"  ✓ Generated: {image_url[:50]}...")
-            return image_url
+                    raise ValueError(f"Unexpected image format: {image_data[:100]}")
+            else:
+                raise ValueError(f"No image data found in response: {json.dumps(data, indent=2)}")
 
         except requests.exceptions.RequestException as e:
-            print(f"  ✗ Request failed: {e}")
+            print(f"  X Request failed: {e}")
+            if hasattr(e, 'response') and e.response is not None:
+                print(f"  Response text: {e.response.text}")
             if attempt < retries - 1:
                 wait_time = (attempt + 1) * 5
                 print(f"  Waiting {wait_time}s before retry...")
@@ -113,7 +126,7 @@ def generate_image(prompt: str, retries: int = 3) -> str:
             else:
                 raise
         except (KeyError, IndexError, ValueError) as e:
-            print(f"  ✗ Failed to parse response: {e}")
+            print(f"  X Failed to parse response: {e}")
             if attempt < retries - 1:
                 wait_time = (attempt + 1) * 5
                 print(f"  Waiting {wait_time}s before retry...")
@@ -122,23 +135,30 @@ def generate_image(prompt: str, retries: int = 3) -> str:
                 raise
 
 
-def download_image(url: str, output_path: Path) -> None:
+def save_base64_image(base64_data: str, output_path: Path) -> None:
     """
-    Download an image from URL and save to file
+    Save a base64-encoded image to file
 
     Args:
-        url: Image URL
+        base64_data: Base64-encoded image data (data:image/png;base64,...)
         output_path: Path to save image
     """
-    print(f"  Downloading to {output_path.name}...")
+    print(f"  Saving to {output_path.name}...")
 
-    response = requests.get(url, timeout=60)
-    response.raise_for_status()
+    # Extract the actual base64 data (remove the data:image/png;base64, prefix)
+    if "," in base64_data:
+        base64_str = base64_data.split(",", 1)[1]
+    else:
+        base64_str = base64_data
 
+    # Decode base64 to binary
+    image_bytes = base64.b64decode(base64_str)
+
+    # Create directory if needed and save
     output_path.parent.mkdir(parents=True, exist_ok=True)
-    output_path.write_bytes(response.content)
+    output_path.write_bytes(image_bytes)
 
-    print(f"  ✓ Saved ({len(response.content) // 1024} KB)")
+    print(f"  ✓ Saved ({len(image_bytes) // 1024} KB)")
 
 
 def main():
@@ -155,6 +175,9 @@ def main():
 
     total_images = sum(len(prompts) for prompts in PROMPTS.values())
     current_image = 0
+    successful = 0
+    skipped = 0
+    failed = 0
 
     for book_id, prompts in PROMPTS.items():
         print(f"\n{'=' * 60}")
@@ -181,15 +204,17 @@ def main():
 
             # Skip if already exists
             if output_path.exists():
-                print(f"  ⊙ Already exists, skipping")
+                print(f"  O Already exists, skipping")
+                skipped += 1
                 continue
 
             try:
                 # Generate image
-                image_url = generate_image(prompt)
+                image_data = generate_image(prompt)
 
-                # Download and save
-                download_image(image_url, output_path)
+                # Save base64 image
+                save_base64_image(image_data, output_path)
+                successful += 1
 
                 # Rate limiting - wait between requests
                 if current_image < total_images:
@@ -198,8 +223,9 @@ def main():
                     time.sleep(wait_time)
 
             except Exception as e:
-                print(f"  ✗ ERROR: {e}")
+                print(f"  X ERROR: {e}")
                 print(f"  Skipping {image_name}")
+                failed += 1
                 continue
 
             print()
@@ -209,6 +235,12 @@ def main():
     print("=" * 60)
 
     # Summary
+    print(f"\nResults:")
+    print(f"  Successful: {successful}")
+    print(f"  Skipped: {skipped}")
+    print(f"  Failed: {failed}")
+    print(f"  Total: {total_images}")
+
     print("\nGenerated images:")
     for book_id in PROMPTS.keys():
         book_dir = images_dir / book_id
@@ -216,12 +248,13 @@ def main():
             png_files = list(book_dir.rglob("*.png"))
             print(f"  {book_id}: {len(png_files)} images")
 
-    print("\nNext steps:")
-    print("  1. Review generated images in images/ directory")
-    print("  2. Commit and push to GitHub:")
-    print("     git add images/")
-    print('     git commit -m "Add AI-generated book images"')
-    print("     git push origin main")
+    if successful > 0:
+        print("\nNext steps:")
+        print("  1. Review generated images in images/ directory")
+        print("  2. Commit and push to GitHub:")
+        print("     git add images/")
+        print('     git commit -m "Add AI-generated book images"')
+        print("     git push origin main")
 
 
 if __name__ == "__main__":
