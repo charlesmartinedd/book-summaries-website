@@ -1,0 +1,22 @@
+[91m[1mError: [0mUnexpected error, check log file at C:\Users\MarieLexisDad\.local\share\opencode\log\2025-12-14T160209.log for more details
+
+BunInstallFailedError: BunInstallFailedError
+ data: {
+  pkg: "opencode-gemini-auth",
+  version: "latest",
+},
+
+      at src/bun/index.ts:109:21
+      at src/bun/index.ts:100:23
+      at processTicksAndRejections (native:7:39)
+
+41 |       code,
+42 |       stdout,
+43 |       stderr,
+44 |     })
+45 |     if (code !== 0) {
+46 |       throw new Error(`Command failed with exit code ${result.exitCode}`)
+                 ^
+error: Command failed with exit code 66
+      at run2 (src/bun/index.ts:46:13)
+
