@@ -1,16 +1,19 @@
 {
   "name": "book-summaries-website",
   "version": "1.0.0",
-  "description": "",
+  "description": "Interactive book summaries for classic literature",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "test:report": "playwright show-report test-results/html"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/charlesmartinedd/book-summaries-website.git"
   },
-  "keywords": [],
+  "keywords": ["book-summaries", "classic-literature", "education"],
   "author": "",
   "license": "ISC",
   "bugs": {

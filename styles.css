@@ -560,7 +560,9 @@ html, body {
     inset: 0;
     background: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(4px);
+    z-index: 1;
 }
+    z-index: 1;
 
 .modal-content {
     position: relative;
@@ -574,6 +576,7 @@ html, body {
     display: flex;
     flex-direction: column;
     animation: modalSlideIn var(--transition-base);
+    z-index: 2;
 }
 
 @keyframes modalSlideIn {
@@ -642,6 +645,8 @@ html, body {
 }
 
 .modal-nav {
+    position: relative;
+    z-index: 3;
     display: flex;
     justify-content: space-between;
     padding: var(--spacing-md) var(--spacing-xl);
