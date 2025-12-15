@@ -96,6 +96,55 @@ const christmasCarolData = {
                     answer: "Scrooge grabbed the ghost's cap (the candle-snuffer) and pushed it down over the spirit's head to put out its light. He couldn't bear to watch any more painful memories, especially seeing Belle's happy family that he gave up for money."
                 }
             ]
+        },
+        stave3: {
+            title: "Stave 3: The Second of the Three Spirits",
+            questions: [
+                {
+                    question: "How did Scrooge find the second Spirit?",
+                    answer: "When the clock struck one, Scrooge's room transformed into a magical scene. The walls and ceiling were covered with holly, mistletoe, and ivy, and a roaring fire blazed in the fireplace. The Ghost of Christmas Present was sitting on a throne made of turkeys, geese, and Christmas puddings, waiting for Scrooge."
+                },
+                {
+                    question: "Describe the physical appearance of the second Spirit.",
+                    answer: "The Ghost of Christmas Present was a jolly giant dressed in a green velvet robe trimmed with white fur. He carried a glowing torch shaped like a cornucopia (a horn of plenty). Wherever the light from his torch fell, people became kinder and more generous."
+                },
+                {
+                    question: "Describe the first place Scrooge and the second Spirit visited.",
+                    answer: "The first place was the snowy streets of London on Christmas morning. The spirit showed Scrooge how even the poorest families found reasons to celebrate. People waved and called 'Merry Christmas!' to strangers on the street, spreading joy and goodwill."
+                },
+                {
+                    question: "What was the second place they visited?",
+                    answer: "The second place was the tiny home of Bob Cratchit, Scrooge's underpaid clerk. Despite their poverty, the Cratchit family was bursting with joy as they prepared their Christmas dinner together."
+                },
+                {
+                    question: "Who was Tiny Tim? What did Scrooge ask about Tiny Tim? What was the Ghost's reply?",
+                    answer: "Tiny Tim was Bob Cratchit's youngest son—a frail, sweet boy who walked with a little crutch but had a spirit that shone brighter than anyone's. When the family said grace, Tim called out 'God bless us, every one!' Scrooge asked about Tim's future, and the ghost delivered terrible news: without more food and medicine, the boy would die."
+                },
+                {
+                    question: "Describe the Cratchit family's toast to Scrooge. Did anyone in the family disagree about Bob's boss?",
+                    answer: "Bob Cratchit raised his glass to toast Mr. Scrooge as 'the Founder of the Feast.' Mrs. Cratchit disagreed strongly—she did not think Scrooge deserved any toast at all! She thought he was a horrible, stingy man who didn't pay her husband enough. But out of respect for her husband, she joined in the toast anyway."
+                },
+                {
+                    question: "What were the other places the Ghost took Scrooge? What did Scrooge discover at those places?",
+                    answer: "The Ghost took Scrooge to his nephew Fred's Christmas party. There, Scrooge discovered that even though the guests thought he was a horrible old miser, Fred still proposed a toast to Uncle Scrooge! The guests were playing games and laughing, showing the joy Scrooge was missing by refusing Fred's invitation."
+                },
+                {
+                    question: "What did Scrooge's niece and nephew say about him?",
+                    answer: "Fred (Scrooge's nephew) defended his uncle and proposed a toast to him, saying he pitied Scrooge for being so miserable. Fred's wife and the other guests thought Scrooge was disagreeable and didn't deserve such kindness, but Fred remained hopeful that his uncle might change."
+                },
+                {
+                    question: "What did Scrooge do while his nephew and the others were playing games?",
+                    answer: "Scrooge watched invisibly as the guests played games, and he became caught up in the fun! He laughed along with them and even called out answers to the games, forgetting that nobody could hear him. He was enjoying himself more than he had in years."
+                },
+                {
+                    question: "Describe the 'Yes and No' game. What was the subject of the game?",
+                    answer: "The 'Yes and No' game was a guessing game where one person thinks of something and the others ask yes-or-no questions to figure out what it is. The subject of the game was Uncle Scrooge himself! The guests guessed he was an animal (because of how he acted), that he lived in London, that he was disagreeable, and finally that he was Scrooge—which made everyone laugh."
+                },
+                {
+                    question: "Think About It: What kinds of thoughts and feelings do you think Scrooge is having when he hears Bob Cratchit's family talking about him? What would it be like to overhear people talking about you?",
+                    answer: "Scrooge likely felt a mix of shame and surprise. He heard Mrs. Cratchit criticize him harshly, calling him stingy and disagreeable, while Bob defended toasting him out of gratitude for his job. Hearing how his meanness affected others probably made Scrooge feel guilty. Overhearing people talk about you can be uncomfortable—it forces you to see yourself through others' eyes and realize how your actions affect people around you."
+                }
+            ]
         }
     },
 

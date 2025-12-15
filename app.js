@@ -11,6 +11,7 @@ let currentBook = null;
 let currentSection = null;
 let currentModalItems = [];
 let currentModalIndex = 0;
+let currentStave = "stave2"; // Track which stave questions to show
 
 // ==========================================
 // NAVIGATION
@@ -274,14 +275,24 @@ function renderStudyQuestions() {
     if (!christmasCarolData.studyQuestions) return;
 
     const container = document.getElementById('cc-questions-grid');
-    const stave2 = christmasCarolData.studyQuestions.stave2;
+    const staveData = christmasCarolData.studyQuestions[currentStave];
+
+    // Get available staves
+    const availableStaves = Object.keys(christmasCarolData.studyQuestions);
 
     container.innerHTML = `
+        <div class="stave-tabs">
+            ${availableStaves.map(stave => `
+                <button class="stave-tab-btn ${stave === currentStave ? 'active' : ''}" onclick="switchStave('${stave}')">
+                    ${stave === 'stave2' ? 'Stave 2' : 'Stave 3'}
+                </button>
+            `).join('')}
+        </div>
         <div class="questions-header">
-            <h2>${stave2.title}</h2>
+            <h2>${staveData.title}</h2>
             <p>Click each question to reveal the answer</p>
         </div>
-        ${stave2.questions.map((q, index) => `
+        ${staveData.questions.map((q, index) => `
             <div class="question-card" id="question-${index}">
                 <div class="question-header" onclick="toggleQuestion(${index})">
                     <div class="question-number">${index + 1}</div>
@@ -299,6 +310,11 @@ function renderStudyQuestions() {
             </div>
         `).join('')}
     `;
+}
+
+function switchStave(stave) {
+    currentStave = stave;
+    renderStudyQuestions();
 }
 
 function toggleQuestion(index) {
