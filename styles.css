@@ -878,19 +878,14 @@ html, body {
     z-index: 1000;
     align-items: center;
     justify-content: center;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    cursor: pointer;
 }
 
 .modal.active {
     display: flex;
     animation: fadeIn var(--transition-fast);
-}
-
-.modal-backdrop {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(4px);
-    z-index: 1;
 }
 
 .modal-content {
@@ -905,7 +900,7 @@ html, body {
     display: flex;
     flex-direction: column;
     animation: modalSlideIn var(--transition-base);
-    z-index: 2;
+    cursor: default;
 }
 
 @keyframes modalSlideIn {

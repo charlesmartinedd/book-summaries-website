@@ -24,8 +24,8 @@ test.describe('Classic Book Summaries Website', () => {
     await expect(landing).toBeVisible();
 
     // Check title and subtitle
-    await expect(page.locator('.landing-title')).toContainText('Classic Stories');
-    await expect(page.locator('.landing-subtitle')).toContainText('Discover timeless adventures');
+    await expect(page.locator('.landing-title')).toContainText('Stories for Marie Alexandria Martin');
+    await expect(page.locator('.landing-subtitle')).toContainText('Classic adventures we need to read together');
 
     // Check both book cards are present
     const bookCards = page.locator('.book-card');
@@ -275,8 +275,8 @@ test.describe('Classic Book Summaries Website', () => {
     // Verify modal is open
     await expect(page.locator('#modal.active')).toBeVisible();
 
-    // Click backdrop - force click to bypass pointer interception
-    await page.locator('.modal-backdrop').click({ force: true });
+    // Click modal background (outside content) to close
+    await page.locator('#modal').click({ position: { x: 10, y: 10 } });
     await page.waitForTimeout(300);
 
     // Modal should be closed
