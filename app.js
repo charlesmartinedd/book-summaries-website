@@ -280,11 +280,17 @@ function renderStudyQuestions() {
     // Get available staves
     const availableStaves = Object.keys(christmasCarolData.studyQuestions);
 
+    // Generate proper stave label from key (stave2 -> "Stave 2", stave4 -> "Stave 4", etc.)
+    const getStaveLabel = (stave) => {
+        const num = stave.replace('stave', '');
+        return `Stave ${num}`;
+    };
+
     container.innerHTML = `
         <div class="stave-tabs">
             ${availableStaves.map(stave => `
                 <button class="stave-tab-btn ${stave === currentStave ? 'active' : ''}" onclick="switchStave('${stave}')">
-                    ${stave === 'stave2' ? 'Stave 2' : 'Stave 3'}
+                    ${getStaveLabel(stave)}
                 </button>
             `).join('')}
         </div>
