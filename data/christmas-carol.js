@@ -150,52 +150,48 @@ const christmasCarolData = {
             title: "Stave 4: The Last of the Three Spirits",
             questions: [
                 {
-                    question: "How did Scrooge feel about the Ghost of Christmas Yet to Come?",
-                    answer: "Scrooge feared the final Spirit more than any of the others. He told the ghost, 'I fear you more than any spectre I have seen.' However, he knew he had to go with the Spirit to learn his lesson and become a better man. His knees trembled as he followed the phantom."
+                    question: "Describe the physical appearance of the Ghost of Christmas Yet to Come. What was Scrooge's reaction to this spirit?",
+                    answer: "The Ghost of Christmas Yet to Come was shrouded in a deep black garment that concealed its head, face, and form completely. The only visible part was one outstretched hand. It never spoke—it only pointed with its skeletal finger. It looked like the Grim Reaper, the symbol of death. Scrooge was terrified of this spirit more than any other. He said, 'I fear you more than any spectre I have seen.' His knees trembled as he followed the phantom, but he knew he had to go with it to learn his lesson."
                 },
                 {
-                    question: "Describe the Phantom.",
-                    answer: "The Ghost of Christmas Yet to Come was the most terrifying spirit of all. It was shrouded in a deep black garment that concealed its head, face, and form completely. The only visible part was one outstretched hand. It never spoke—it only pointed with its skeletal finger. It looked like the Grim Reaper, the symbol of death."
+                    question: "Where did Scrooge and the Spirit go first? What did they overhear?",
+                    answer: "The Spirit took Scrooge to the streets of London, near the Stock Exchange, where a group of businessmen were gathered. They overheard the men casually discussing someone's recent death. The businessmen joked that the dead man's funeral would probably be very cheap, and said they would only attend if lunch was served. They laughed about how unloved and unmourned this person was."
                 },
                 {
-                    question: "Where did the Spirit and Scrooge go first?",
-                    answer: "The Spirit took Scrooge to the streets of London, near the Stock Exchange. The ghostly hand pointed toward a group of businessmen, indicating that Scrooge should listen to their conversation."
+                    question: "What was Scrooge's attitude about the third visitor of the night?",
+                    answer: "Scrooge was deeply afraid of the Ghost of Christmas Yet to Come, more than he had been of the other two spirits. However, he also showed acceptance and willingness to learn. He told the spirit that he knew its purpose was to do him good, and that he hoped to become a different man from what he was. Despite his fear, Scrooge was prepared to follow the ghost and face whatever it would show him."
                 },
                 {
-                    question: "What were the businessmen talking about?",
-                    answer: "The businessmen were casually discussing someone's recent death. They never said the dead man's name, but they commented on how cheap and mean he was in life. They joked that his funeral would probably be very cheap too, and said they would only attend if lunch was served. They laughed about how unloved this person was."
+                    question: "Where do they go second? What did they see? What was Scrooge's reaction?",
+                    answer: "The Spirit took Scrooge to a dirty, run-down shop in a poor part of town run by a man named Old Joe. There, three people arrived to sell items they had stolen from a dead man's house—bed curtains, blankets, silver, clothing, and even the shirt the dead man was supposed to be buried in. Scrooge was horrified and disgusted by this scene. He realized how terrible it was that someone could die so unloved that people would steal from their corpse."
                 },
                 {
-                    question: "Describe the second place they visited. Who was Old Joe? What was wrong with the room?",
-                    answer: "The Spirit took Scrooge to a dirty, run-down shop in a poor, seedy part of town. Old Joe was a shady dealer who bought and sold stolen or secondhand items—a fence for thieves. The room was filthy and filled with rusty keys, chains, hinges, and rags. It was a place where desperate people came to sell whatever they could get their hands on."
+                    question: "What did Scrooge think about when he saw the dead man?",
+                    answer: "When the Spirit showed Scrooge a dead body lying alone in a dark room, covered with a sheet, Scrooge thought about how lonely and sad this death was. He could not bring himself to lift the sheet and see who had died. He thought about whether anyone mourned this person, whether anyone cared, and he desperately wanted to see some tenderness or emotion connected to this death—but there was none."
                 },
                 {
-                    question: "What was in the bundle the first man brought?",
-                    answer: "The first man (the undertaker's assistant) brought a bundle containing small items he had stolen from the dead man's house, including a pencil case, sleeve buttons, and a brooch. These were things he had taken while preparing the body for burial."
+                    question: "What did Scrooge ask the Spirit to show him next? What did the Ghost show him?",
+                    answer: "Scrooge begged the Spirit to show him someone who felt emotion about this death—anyone who cared. The Ghost showed him a young couple who actually seemed relieved by the death because they owed money to the dead man and now had more time to pay. Then the Spirit showed him the Cratchit family, who were mourning—but they were mourning Tiny Tim, who had died. This was the tenderness Scrooge had asked to see, but it broke his heart."
                 },
                 {
-                    question: "What was in the bundle the first woman brought?",
-                    answer: "The first woman (the laundress) brought a bundle containing sheets, towels, silver sugar-tongs, teaspoons, and a pair of boots. She had stolen these household items from the dead man's home while no one was watching."
+                    question: "Who had been kind to Bob Cratchit, and what was the kindness?",
+                    answer: "Mr. Scrooge's nephew Fred had been kind to Bob Cratchit. When Fred heard about Tiny Tim's death, he offered to help the Cratchit family in any way he could. He told Bob that if there was anything he needed, Bob should come to him. This kindness touched Bob deeply during his time of grief and showed that Fred was the opposite of his uncle Scrooge."
                 },
                 {
-                    question: "What was in the bundle the third woman brought? Where did she get the things?",
-                    answer: "The third woman (the charwoman/cleaning lady) brought the most shocking items: the dead man's bed curtains, blankets, and even the shirt he was supposed to be buried in! She had stripped these items right off the corpse and the bed where he died. She said if he had been nicer in life, someone would have been there to stop her, but since he was so mean, no one cared."
+                    question: "Who was the dead man? How did Scrooge discover who it was?",
+                    answer: "The dead man was Scrooge himself! He discovered this when the Spirit took him to a dark, neglected graveyard and pointed to a tombstone covered in weeds. When Scrooge wiped away the dirt and read the name carved on the stone, he saw his own name: EBENEZER SCROOGE. He finally realized that he was the unloved, unmourned dead man everyone had been talking about throughout the night."
                 },
                 {
-                    question: "What was the next place they visited? How did Scrooge feel about this place?",
-                    answer: "The Spirit took Scrooge to see a dead body lying alone in a dark room, covered with a sheet. The room was cold and bare. Scrooge felt horrified and deeply disturbed. He could not bring himself to lift the sheet and see who had died. The loneliness of the scene—dying with no one to mourn or care—terrified him."
+                    question: "What question did Scrooge ask the Ghost as they stood among the graves?",
+                    answer: "Scrooge asked the Ghost whether the shadows he had been shown were the shadows of things that WILL be, or only the shadows of things that MAY be. He wanted to know if this terrible future was set in stone, or if he could still change it by changing his ways. He desperately hoped that his fate was not sealed."
                 },
                 {
-                    question: "Describe the Cratchit house. What happened to Tiny Tim?",
-                    answer: "The Cratchit house was unusually quiet and sad. The family sat together in mourning clothes, crying softly. Tiny Tim had died. His little crutch sat by the empty fireplace, and Bob Cratchit wept as he talked about visiting Tim's grave. The cheerful family Scrooge had seen before was now broken by grief."
+                    question: "What did Scrooge tell the Ghost he would do?",
+                    answer: "Scrooge fell to his knees and grabbed the Ghost's robe, making a solemn promise. He vowed that he would honor Christmas in his heart and try to keep it all year long. He promised to live in the Past, Present, and Future—learning from all three spirits. He swore he would change his ways and not be the man he had been. He begged for a chance to prove that he could change."
                 },
                 {
-                    question: "Where was the last place the Spirit took Scrooge? What did Scrooge see on the tombstone?",
-                    answer: "The Spirit took Scrooge to a dark, neglected graveyard. The ghost pointed to a tombstone covered in weeds. When Scrooge wiped away the dirt and read the name carved on the stone, he saw his own name: EBENEZER SCROOGE. He finally realized that he was the unloved dead man everyone had been talking about."
-                },
-                {
-                    question: "Think About It: What lesson did Scrooge learn from each Spirit? How do you think he will change?",
-                    answer: "From the Ghost of Christmas Past, Scrooge learned that he was once capable of love and happiness, but chose money instead. From the Ghost of Christmas Present, he learned that even poor people like the Cratchits find joy in family and togetherness, and that his actions hurt real people like Tiny Tim. From the Ghost of Christmas Yet to Come, he learned that if he doesn't change, he will die alone and unmourned, and Tiny Tim will die too. These lessons will make Scrooge generous, kind, and grateful for every day he has left."
+                    question: "Think About It: What do you think about fate? Do we get to change our future? Can people make different choices that lead to a different future?",
+                    answer: "The story suggests that our future is not set in stone—we have the power to change it through our choices. Scrooge's question to the Ghost shows that he believed people can alter their fate by changing their behavior. The story's message is hopeful: no matter how badly someone has lived, it is never too late to change. Every day we make choices that shape our future, and choosing kindness, generosity, and love can lead to a completely different outcome than choosing greed and selfishness."
                 }
             ]
         },
@@ -204,39 +200,39 @@ const christmasCarolData = {
             questions: [
                 {
                     question: "Describe Scrooge's behavior when he woke up.",
-                    answer: "Scrooge woke up overjoyed and overwhelmed with emotion! He laughed and cried at the same time. He jumped out of bed and danced around his room. He said, 'I am as light as a feather, I am as happy as an angel, I am as merry as a schoolboy. I am as giddy as a drunken man!' He had never felt so alive and happy in his entire life."
+                    answer: "Scrooge woke up overjoyed and overwhelmed with emotion! He laughed and cried at the same time. He jumped out of bed and danced around his room, feeling giddy with happiness. He said, 'I am as light as a feather, I am as happy as an angel, I am as merry as a schoolboy. I am as giddy as a drunken man!' He didn't know what day it was or how long he had been with the spirits, but he felt reborn and full of life."
                 },
                 {
-                    question: "What day was it when Scrooge woke up?",
-                    answer: "When Scrooge woke up, it was Christmas Day morning! The spirits had done everything in one night. Scrooge was thrilled to discover he hadn't missed Christmas and still had time to change his ways and make things right."
+                    question: "What day was it when Scrooge woke up? How many nights passed while Scrooge was visited by the Spirits?",
+                    answer: "When Scrooge woke up, it was Christmas Day morning! Amazingly, only ONE night had passed. The three spirits had visited him all in a single night, even though it felt much longer. Scrooge was thrilled to discover he hadn't missed Christmas and still had time to change his ways and make things right. The spirits had done it all in one night!"
                 },
                 {
                     question: "What did Scrooge ask the boy under his window to do, and why?",
-                    answer: "Scrooge called down to a boy on the street and asked him to run to the poulterer's shop and buy the biggest turkey in the window—the prize turkey that was as big as the boy himself! Scrooge wanted to send it anonymously to the Cratchit family so they could have a proper Christmas feast."
+                    answer: "Scrooge called down to a boy on the street and asked him to run to the poulterer's shop and buy the biggest turkey in the window—the prize turkey that was as big as the boy himself! Scrooge wanted to send it anonymously to the Cratchit family so they could have a proper Christmas feast. He paid the boy handsomely and sent the turkey by cab to Bob Cratchit's house as a surprise gift."
                 },
                 {
                     question: "How did Scrooge act when he went outside?",
-                    answer: "Scrooge went outside with a huge smile on his face. He looked so friendly and pleasant that strangers said 'Good morning!' and 'Merry Christmas!' to him. He patted children on the head, talked to beggars, and found that everything made him happy. He had never realized how wonderful it felt to be kind to others."
+                    answer: "Scrooge went outside with a huge smile on his face, looking so friendly and pleasant that strangers said 'Good morning!' and 'Merry Christmas!' to him. He walked through the streets patting children on the head, talking happily to beggars, and finding that everything made him joyful. He had never realized how wonderful it felt to be kind to others and to be part of the community he had shut out for so long."
                 },
                 {
-                    question: "What did Scrooge do when he met the gentlemen who had asked for charity?",
-                    answer: "Scrooge met one of the charity collectors he had rudely rejected the day before. This time, instead of turning away, Scrooge leaned in and whispered an enormous donation in the man's ear—so large that the gentleman nearly fainted from shock! Scrooge promised to give much more in the future to help the poor."
+                    question: "What did Scrooge do when he met the man who had asked for a donation the day before?",
+                    answer: "Scrooge met one of the charity collectors he had rudely rejected the day before. This time, instead of turning away, Scrooge approached him warmly and apologized for his behavior. Then he leaned in and whispered an enormous donation in the man's ear—so large that the gentleman nearly fainted from shock! Scrooge promised to give much more in the future to help the poor and make up for lost time."
                 },
                 {
-                    question: "Where did Scrooge go for Christmas dinner?",
-                    answer: "Scrooge went to his nephew Fred's house for Christmas dinner—the same invitation he had rudely refused the day before! When Fred saw his uncle at the door, he was so shocked he could barely speak. But Fred welcomed him with open arms, and Scrooge had the best time he'd had in years, playing games and laughing with the family."
+                    question: "Who did Scrooge visit? What was the reaction?",
+                    answer: "Scrooge visited his nephew Fred's house for Christmas dinner—the same invitation he had rudely refused the day before with 'Bah! Humbug!' When Fred saw his uncle at the door, he was so shocked he could barely speak. But Fred recovered quickly and welcomed Scrooge with open arms and great joy. Scrooge had a wonderful time at the party, playing games, laughing, and enjoying the company of family—something he hadn't done in many years."
                 },
                 {
-                    question: "What did Scrooge do for Bob Cratchit?",
-                    answer: "The next morning, Scrooge arrived at work early and waited for Bob, who came in 18 minutes late. Scrooge pretended to be angry, growling in his old mean voice. Then he burst out laughing and told Bob he was going to raise his salary! He promised to help Bob's struggling family and said they would discuss Bob's future over a warm bowl of punch."
+                    question: "What happened at the office the next morning?",
+                    answer: "The next morning, Scrooge arrived at work early and waited for Bob Cratchit, who came in 18 minutes late (afraid of being scolded). Scrooge pretended to be angry, growling in his old mean voice and threatening to raise Bob's salary! Bob was confused until Scrooge burst out laughing. Scrooge told Bob he was going to raise his salary, help his struggling family, and become like a second father to Tiny Tim. He also promised they would discuss Bob's affairs over a warm bowl of punch."
                 },
                 {
-                    question: "What happened to Tiny Tim?",
-                    answer: "Tiny Tim did NOT die! Because Scrooge changed his ways and helped the Cratchit family, Tim got the food and medicine he needed. Scrooge became like a second father to the boy. The story tells us that Tiny Tim lived, and Scrooge kept his promise to honor Christmas and help others for the rest of his life."
+                    question: "How did Scrooge spend the rest of his life? What lessons did he learn?",
+                    answer: "Scrooge became known as one of the kindest, most generous men in all of London. He became like a second father to Tiny Tim, who did NOT die. Scrooge learned to honor Christmas in his heart and keep its spirit alive every single day of the year. He learned that money means nothing without people to share life with, that kindness brings more joy than wealth ever could, and that it is never too late to change and become a better person. As Tiny Tim would say: 'God bless us, every one!'"
                 },
                 {
-                    question: "Think About It: How did Scrooge change from the beginning of the story to the end? What do you think caused this change?",
-                    answer: "At the beginning, Scrooge was cold, greedy, and hateful. He said 'Bah! Humbug!' to Christmas and refused to help anyone. By the end, he was generous, joyful, and full of love. He gave money to charity, bought gifts for others, and treated everyone with kindness. The three spirits caused this change by showing him his past (reminding him he once knew love), his present (showing him how his actions hurt others like Tiny Tim), and his future (revealing the lonely death that awaited him). Scrooge realized that money meant nothing without people to share life with, and that it's never too late to become a better person."
+                    question: "Think About It: Imagine being a villager in the town where Scrooge lives. What would it be like to see him now? What questions would you have? How would you react?",
+                    answer: "As a villager, seeing Scrooge's transformation would be absolutely shocking! For years, everyone knew him as the meanest, coldest man in London—someone who said 'Bah! Humbug!' to Christmas and refused to help anyone. Suddenly seeing him laughing, giving to charity, and wishing people 'Merry Christmas' would be hard to believe. You might wonder: 'What happened to him? Is this a trick? Did he hit his head?' But as time passed and his kindness continued, you would realize his change was real. You might feel hopeful—if even Scrooge can change, maybe anyone can become a better person."
                 }
             ]
         }
